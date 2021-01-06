@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template} 
+\usepackage{graphicx,url}
+\usepackage{url}
+\usepackage[brazil]{babel} 
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[normalem]{ulem}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[square,authoryear]{natbib}
+\usepackage{amssymb} 
+\usepackage{mathalfa} 
+\usepackage{algorithm} 
+\usepackage{algpseudocode} 
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{listings}
+
+\usepackage{amsmath} 
+\usepackage{booktabs}
+
+\urlstyle{same}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand\Tstrut{\rule{0pt}{2.6ex}} 
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} 
+\newcommand{\scell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\usepackage[nolist,nohyperlinks]{acronym}
+
+\title{Docking Molecular de la proteína E del SARS-Cov-2 con la Amantadina como ligando}
+
+\author{Autor:\\
+        Jessica Mariana Carrasco Ceballos\inst{1}\\ 
+        Docentes-Investigadores:\\
+        Dr. Gonzalo Emiliano Aranda Abreu\inst{1}; Dr. Adolfo Centeno Tellez\inst{1}}
+
+
+\address{Instituto de Investigaciones Cerebrales IICE - UV
+	\email{jessimar03@hotmail.com}
+}
+
+
+
+\begin{document} 
+	
+	\maketitle
+	\begin{abstract}
+	     El SARS-CoV-2 es un tipo de virus causante de la enfermedad por coronavirus 2019, el cual provocó una pandemia mundial. Su transmisión se lleva a cabo por contacto con las secreciones de las personas infectadas, dentro de sus signos y símtomas se encuentran fiebre, estornudos, dolor de garganta e insuficiencia respiratoria.
+	\end{abstract}
+	
+	\section{Introducción}
+	\label{sec:introducao}
+	
+		El nuevo coronavirus SARS-CoV-2 se descubrió en un grupo de pacientes con neumonía de tipo desconocida en Wuhan, China, en diciembre del 2019. Los coronavirus son virus envueltos de ARN de sentido positivo no segmentados que pertenecen a la familia coronoviridae (Michael J. Smart, 2021).
+	
+	Estructuralmente son virus esféricos o pleomórficos, con un diámetro de 80-120 nm. La superficie del virión se encuentra organizada por proyecciones que al mismo tiempo están constituidas por trímeros de la glicoproteína viral S (Spike), la cual media la entrada del virus en la célula huésped.
+	Existen otras proyecciones formadas por dímeros de las proteínas HE (Hemaglutinina-Esterasa). La envoltura viral está reforzada por la glicoproteína de Membrana (M), así mismo existe otro componente estructural de este virión, la proteína de Envoltura (E). En el interior, la partícula viral está formada por una proteína adicional llamada Nucleoproteína (N), la cual se une al ARN viral en una estructura helicoidal, protegiendo al ARN de ser degradado (Michael J. Smart, 2021; Harrison, et al, 2020). 
+	
+	La proteína E está constituida por 75 aminoácidos, de los cuales del 15 al 39 forman una estructura de hélice alfa, mientras que los demás se encargan de formar espirales. Diversas investigaciones han sugerido que la carencia de la proteína E disminuye el daño en ratones que han sido infectados con COVID-19. Lo aterior se demostró mediante el uso del software ProtScale, el cual muestra que la proteína tiene una región muy hidrófoba, lo que indica que forma parte de una región intramembrana (Abreu, Aguilar, Covarrubias, y Durán, 2020).
+	
+	El origen este virus aún es incierto, no obstante, se ha observado que algunos de los primeros pacientes identificados tenían como factor común el contacto con un mercado de mariscos y animales, pero muchos otros no evidenciaron contacto con ese lugar en ningún momento, lo cual sugiere que el SARS-CoV-2 se pudo transmitir de animales a humanos, sin embargo, aún es necesario realizar más investigaciones al respecto para establecer el origen preciso de la infección (Naserghandi, Allameh, y Saffarpour, 2020; Harapan et al., 2020).
+	
+	La transmisión de esta enfermedad es a través del contacto con las secreciones de las personas infectadas a través de las gotitas de flügge, las cuales son producidas por hablar, toser y estornudar, y por el contacto directo. Se han reportado casos de transmisión fecal-oral, transmisión por fómites, transmisión perinatal, sin embargo, todas ellas continúan bajo investigación (Naserghandi, Allameh, y Saffarpour, 2020; Huraimel, Alhosani, Kunhabdulla, y Stietiya, 2020).
+	
+	Las manifestaciones clínicas más comunes de COVID-19 se pueden dividir en tres niveles según la gravedad de la enfermedad: leve: fiebre, tos seca, fatiga, opacidades en vidrio esmerilado en la radiografía de tórax, neumonía leve; grave: disnea, disminución de la saturación de oxígeno, frecuencia respiratoria >30 rpm, infiltrados pulmonares mayor a 50 por ciento en 24-48 horas; y crítico: síndrome de dificultad respiratoria aguda (SDRA), insuficiencia respiratoria, choque séptico, acidosis metabólica, disfunción de la coagulación, dichas manifestaciones van a depender de la edad del sujeto (Huraimel et al., 2020). 
+	
+	Actualmente se esta trabajando en el desarrollo de vacunas para el tratamiento de esta patología, así como se investiga el uso de múltiples fármacos, uno ellos es la amantadina, la cual ha sido utilizada como terapia antiviral para otros virus como la influenza tipo A, por lo que se espera que también pueda tener efecto en SARS-CoV-2. Se trata de una amina cíclica primaria que deriva del adamantano. El mecanismo de acción propuesto para este fármaco es bloquear la replicación viral por medio de la inhibición de la proteína M2, esta última actúa como un canal iónico que facilita la entrada de iones al virión endocitado (figura 1). Cuando el virus ingresa a la célula se forma un endosoma, la amantadina al ser lipofílica puede atravesar la membrana de éste interrumpiendo la liberación del virión en la célula, así mismo puede ingresar al canal E del coronavirus para evitar la liberación del núcleo viral en la célula. Gracias a algunos estudios de acoplamiento se ha sugerido que la amantadina puede interactuar con diversos aminoácidos del virus para bloquear el canal de protones (formado por la proteína M2 (Araújo Ramiro; Aranda-Abreu, 2020; Fehlmann P. et al., 2005). Lo anterior, pretende demostrar el posible uso de amantadina en la infección por COVID-19.
+	
+	\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.25\textwidth]{figures/Amantadina.png}
+ \caption{Papel de la amantadina como antiviral y función de la proteína M2 en la replicación del virus (Fehlmann P. et al., 2005)}
+ \label{fig:exemplo}
+\end{figure}
+	
+	\section{Docking molecular en interacción con proteínas}
+	\label{sec:fund_teorica}
+	
+	El Docking o acoplamiento molecular es un método utilizado en bioinformática que permite encontrar compuestos novedosos de interés terapéutico, a traves de la predicción de interacciones ligando-objetivo a nivel molecular con la finalidad de formar un complejo estable, dando como resultado una estructura tridimensional realizada in silico (Pinzi y Rastelli, 2019). Para llevarlo a cabo es necesario conocer y utilizar de forma adecuada algoritmos metaheurísticos así como conocer las distintas variables, coordenadas de traslación y movimientos de la proteína o molécula que se va a estudiar. Además, el estudio de esta interacción tiene como objetivo encontrar un compuesto que con la mínima concentración forme el complejo y genere una respuesta (Maté, 2017). Por lo que hoy en día este método ha sido utilizado para encontrar las interacciones de la amantadina con los diversos aminoácidos que posee una proteína, por ejemplo, la proteína E del coronavirus SARS-CoV-2, para bloquear el canal de protones y con ello la entrada del virus a la célula.
+	
+	
+	
+	\section{Metodología}
+	\label{sec:metodologia}
+	
+	Para llevar a cabo el método de acoplamiento molecular se utilizaron dos programas, AutodockTools-1.5.6 y AutoDock Vina, la proteína E del SARS-CoV-2, como ligando la amantadina (DB00915) y los aminoácidos LEU18, LEU19 y ASN15. Antes de iniciar el procedimiento es necesario preparar la proteína, agregando átomos faltantes, ubicaciones alternativas, roturas de cadenas y eliminar aguas cristalográficas. Una vez hecho esto, se procedió a subir la proteína al programa y hacer que fuera visible en cintas (figura 2). 
+	
+	 \begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.70\textwidth]{figures/cintas.png}
+ \caption{Proteína E del SARS-CoV-2}
+ \label{fig:exemplo}
+\end{figure}
+	
+	
+	
+	Posteriormente se integro la amantadina (DB00915) como ligando formateado para AutoDock, en formato .pdb (figura 3).
+	
+	\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.70\textwidth]{figures/ligando.png}
+ \caption{Amantadina como ligando (DB00915)}
+ \label{fig:exemplo}
+\end{figure}
+	
+	
+	
+	Después se preparó la macromolécula. Con el programa de Autodock se agregaron hidrógenos y se corroboraron las cargas de la molécula. Se eligieron los aminoácidos con los que amantadina pudiera tener interacción, en este caso LEU18, LEU19 y ASN15. Posteriormente, mediante Grid Box se configuró el espacio de búsqueda, así es posible establacer la ubicación y tamaño del área 3D que se analizará durante el experimento. Se colocaron medidas para los ejes x, y, z (figura 4).
+	
+	\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.70\textwidth]{figures/caja.png}
+ \caption{Extensión y ubicación del área tridimensional (3D)}
+ \label{fig:exemplo}
+\end{figure}
+	
+	
+	
+	Para preparar el archivo en parámetros de AutoDock se realizó un acoplamiento corto con 250000 evaluaciones y posteriormente se inició AutoDock4 con AutoDock Vina con el archivo vina.exe.
+	
+	En la computadora se utilizó un CPU de 4, una semilla aleatoria de 1020676528. Dado que se trata de una semilla aleatoria (random seed), la próxima vez que se realicé este procedimiento los resultados serán distintos, por lo que si se quiere obtener el mismo resultado es necesario utilizar este mismo parámetro. Así mismo, se obtuvieron los siguientes datos: energía de afinidad en kcal/mol (todas son negativas),la desviación cuadrática media entre las moléculas y la primera (figura 5).
+	
+	\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.70\textwidth]{figures/semilla.png}
+ \caption{Docking: semilla aleatoria}
+ \label{fig:exemplo}
+\end{figure}
+
+
+
+    Finalmente, se realizó el Docking que mostró las interacciones. La representación del ligando fue con esferas semi sólidas mientras que las interacciones de los aminoácidos se mostraron en jaulas, así como también se mostró la energía de afinidad (figura 6). 
+    
+    \begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.90\textwidth]{figures/docking.png}
+ \caption{Docking mostrando las interacciones}
+ \label{fig:exemplo}
+\end{figure}
+
+
+	
+	\section{Conclusión}
+	\label{sec:conclusao}
+	
+	En conclusión el acoplamiento molecular o Docking, es un método sumamente útil para conocer las diversas interacciones que tiene una determinada molécula o proteína con múltiples ligandos. Lo anterior es importante, ya que nos permite saber si algún ligando farmacológico genera alguna respuesta una vez que se ha unido con la proteína, y así poder descubrir más usos de estos fármacos en una enfermedad específica, como en este caso, el coronavirus. Respecto a este último Aranda, Hernández, Herrera y Rojas (2020) han propuesto a la amantadina como posible ligando para interactuar con la proteína E del SARS-CoV-2 inhibiendo la entrada del virus a la célula, tal y como sucede con el virus de la influenza tipo A. Sin embargo, hoy en día se sigue investigando un posible tratamiento farmacológico para esta enfermedad, además de la vacuna.
+	
+	
+	
+	
+	\section{Referencias}
+\label{chap:Referencias}
+
+1.	Abreu, G. E. A., Aguilar, M. E. H., Covarrubias, D. H., y Durán, F. R. (2020). Amantadine as a drug to mitigate the effects of COVID-19. Medical Hypotheses, 140(April), 1–3. https://doi.org/10.1016/j.mehy.2020.109755
+
+2.	Ara, Ramiro; Aranda-Abreu, E. (2020). Amantadine Treatment for People with COVID-19. (January), 19–21.
+
+3.	Fehlmann P., E., Le Corre P., N., Abarca V., K., Godoy M., P., Montecinos P., L., Veloz B., A., y Ferrés G., M. (2005). Búsqueda de resistencia a amantadina en cepas de virus influenza A aisladas en Santiago de Chile, entre los años 2001 y 2002. Revista Chilena de Infectología, 22(2), 141–146. https://doi.org/10.4067/s0716-10182005000200004
+
+4.	Harapan, H., Itoh, N., Yufika, A., Winardi, W., Keam, S., Te, H., … Mudatsir, M. (2020). Coronavirus disease 2019 (COVID-19): A literature review. Journal of Infection and Public Health, 13(5), 667–673.
+
+5.	Harrison, A. G., Lin, T., y Wang, P. (2020). Mechanisms of SARS-CoV-2 Transmission and Pathogenesis. Trends in Immunology, 41(12), 1100–1115. https://doi.org/10.1016/j.it.2020.10.004
+
+6.	Huraimel, K. Al, Alhosani, M., Kunhabdulla, S., y Stietiya, M. H. (2020). SARS-CoV-2 in the environment: Modes of transmission, early detection and potential role of pollutions. (January).
+
+7.	Maté, C. F. (2017). Modelado Molecular Como Herramienta Para El Descubrimiento De Nuevos Fármacos Que Interaccionan Con Proteínas. 21. Retrieved from http://147.96.70.122/Web/TFG/TFG/Memoria/CRISTINA FONT MATE.pdf
+
+8.	Michael J. Smart, R. B. N. O. C. (2021). COVID-19, una emergencia de salud pública mundial. Revista Clinica Espanola, 55–61.
+
+9.	Naserghandi, A., Allameh, S. F., y Saffarpour, R. (2020). All about COVID-19 in brief. New Microbes and New Infections, 35, 100678. https://doi.org/10.1016/j.nmni.2020.100678
+
+10.	Pinzi, L., y Rastelli, G. (2019). Molecular docking: Shifting paradigms in drug discovery. International Journal of Molecular Sciences, 20(18). https://doi.org/10.3390/ijms20184331
+
+
+
+\end{document}
